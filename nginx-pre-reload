@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
 APP="$1"
-perl -pi -e 's/(\s*)(proxy_pass.*;)/\1\2\n\1client_max_body_size 12M;/g' $DOKKU_ROOT/$APP/nginx.conf
+perl -pi -e 's/(\s*)(proxy_pass.*;)/\1\2\n\1client_max_body_size 50M;/g' $DOKKU_ROOT/$APP/nginx.conf
